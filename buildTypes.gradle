@@ -1,0 +1,44 @@
+//Данный файл описывает типы сборок
+
+apply from: '../keystore/signingConfigs.gradle'
+apply from: '../config.gradle'
+
+android {
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.test
+            multiDexEnabled true
+            minifyEnabled false
+            debuggable = true
+            applicationIdSuffix meta.debugVersionNameSuffix
+            resValue "string", "app_name", "App Debug"
+        }
+        qa {
+            signingConfig signingConfigs.test
+            multiDexEnabled true
+            minifyEnabled false
+            debuggable = true
+            applicationIdSuffix meta.qaVersionNameSuffix
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules.pro'
+            matchingFallbacks = ['release']
+            resValue "string", "app_name", "App QA"
+
+//            Добавить название группи для дистрибьюции
+//            firebaseAppDistribution {
+//                groups=""
+//            }
+        }
+        release {
+            signingConfig signingConfigs.release
+            multiDexEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules.pro'
+            matchingFallbacks = ['release', 'qa']
+
+//            firebaseAppDistribution {
+//                groups=""
+//            }
+        }
+    }
+}

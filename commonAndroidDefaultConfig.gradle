@@ -1,0 +1,44 @@
+// Основная конфигурация для Android
+
+apply from: '../config.gradle'
+
+android {
+    compileSdkVersion meta.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion meta.minSdkVersion
+        targetSdkVersion meta.targetSdkVersion
+        //buildConfigField "String", "YANDEX_METRICA_KEY", '"KeY"'
+
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion versions.composeVersion
+        kotlinCompilerVersion '1.5.31'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}

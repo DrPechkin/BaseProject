@@ -1,0 +1,7 @@
+apply from: '../commonModule.gradle'
+
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+
+}

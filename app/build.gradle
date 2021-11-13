@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id'com.google.firebase.crashlytics'
+    id 'com.google.firebase.appdistribution'
+    id 'com.google.firebase.firebase-perf'
+}
+
+apply from: '../config.gradle'
+apply from: '../keystore/signingConfigs.gradle'
+apply from: '../buildTypes.gradle'
+apply from: '../commonAndroidDefaultConfig.gradle'
+
+android {
+    compileSdk meta.compileSdkVersion
+
+    defaultConfig {
+        applicationId app.applicationId
+        minSdk meta.minSdkVersion
+        targetSdk meta.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
+
+        testBuildType 'qa'
+    }
+}
+
+dependencies {
+    implementation androidX.coreKtx
+    implementation androidX.appcompat
+    implementation androidX.lifecycleScope
+    implementation androidX.material
+    implementation compose.composeUi
+    implementation compose.composeMaterial
+    implementation compose.toolingPreview
+    implementation compose.activityCompose
+}
+
+//apply plugin: 'com.google.gms.google-services'
