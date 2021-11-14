@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="debug_show_app_info_debug_item">Общая информация</string>
+    <string name="debug_show_server_settings_debug_item">Настройки сервера</string>
+    <string name="debug_show_fcm_token_debug_item">FCM-токен</string>
+    <string name="debug_show_memory_debug_item">Память</string>
+    <string name="debug_show_developer_tools_debug_item">Настройки разработчика</string>
+    <string name="debug_show_app_settings_debug_item">Настройки приложения</string>
+    <string name="debug_fcm_empty_text">FCM-токен еще не создан или не реализована логика сохранения токена в хранилище</string>
+    <string name="debug_reload_btn_text">Обновить</string>
+
+    <!-- Debug notification settings -->
+    <string name="debug_notification_channel_id">CHANNEL_ID</string>
+    <string name="debug_screen_title">Debug screen</string>
+    <string name="debug_screen_body">Show debug info</string>
+
+</resources>

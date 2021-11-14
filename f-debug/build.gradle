@@ -3,5 +3,11 @@ apply from: '../commonModule.gradle'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
+    implementation project(":base")
 
+    implementation compose.composeUi
+    implementation compose.composeMaterial
+    implementation compose.uiToolingPreview
+    debugImplementation compose.uiTooling
+    debugImplementation compose.navigationCompose
 }
