@@ -10,3 +10,4 @@ rootProject.name = "BaseComposeProject"
 include ':app'
 include ':f-debug'
 include ':base'
+include ':i-network'

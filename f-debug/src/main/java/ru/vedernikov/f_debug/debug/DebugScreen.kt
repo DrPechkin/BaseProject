@@ -24,7 +24,7 @@ fun DebugScreen(navController: NavController) {
         }
         item {
             DebugMenuItem(stringResource(id = R.string.debug_show_server_settings_debug_item)) {
-
+                navController.navigate(Screens.ServerSettings.route)
             }
         }
         item {

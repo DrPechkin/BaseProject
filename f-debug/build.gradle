@@ -4,6 +4,7 @@ apply plugin: 'kotlin-kapt'
 
 dependencies {
     implementation project(":base")
+    implementation project(":i-network")
 
     implementation compose.composeUi
     implementation compose.composeMaterial

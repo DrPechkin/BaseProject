@@ -13,6 +13,7 @@ import ru.vedernikov.base.ActivityRoute
 import ru.vedernikov.base.BaseActivityView
 import ru.vedernikov.f_debug.Screens
 import ru.vedernikov.f_debug.fcm.FcmScreen
+import ru.vedernikov.f_debug.server_settings.ServerSettingsDebugScreen
 import ru.vedernikov.f_debug.ui.theme.DebugMenuTheme
 
 class DebugActivityView : BaseActivityView() {
@@ -41,6 +42,9 @@ class DebugActivityView : BaseActivityView() {
                         composable(route = Screens.Fcm.route) {
                             FcmScreen()
                         }
+                         composable(route = Screens.ServerSettings.route) {
+                             ServerSettingsDebugScreen()
+                         }
                     }
                 }
             }

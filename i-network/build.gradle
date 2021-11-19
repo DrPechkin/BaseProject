@@ -1,1 +1,8 @@
-apply from: '../commonInteractorModule.gradle'
+apply from: '../commonModule.gradle'
+
+dependencies {
+    implementation project(":base")
+    api retrofit.core
+    api retrofit.converterGson
+    api okHttp.loggingInterceptor
+}

@@ -28,6 +28,7 @@ android {
 
 dependencies {
     implementation project(":f-debug")
+    implementation project(":i-network")
 
     implementation androidX.coreKtx
     implementation androidX.appcompat
