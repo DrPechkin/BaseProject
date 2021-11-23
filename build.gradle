@@ -14,6 +14,7 @@ buildscript {
         classpath build.plugin.tools
         classpath build.plugin.scan
         classpath build.plugin.services
+        classpath di.hiltPlugin
         classpath firebase.plugin.crashlytics
         classpath firebase.plugin.appDistribution
         classpath firebase.plugin.perfomanceMonitor

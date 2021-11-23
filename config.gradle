@@ -19,7 +19,8 @@ ext {
             retrofitVersion               : '2.9.0',              //https://vk.cc/7UFxk3
 
             //leakCanaryVersion             : '2.2',                //https://goo.gl/w3pm32
-            //timberVersion                 : '4.7.1',              //http://bit.ly/2LWbLaY
+            timberVersion                 : '4.7.1',              //http://bit.ly/2LWbLaY
+            processPhoenixVersion         : '2.0.0',              //https://bit.ly/2OAc0po
            // androidDebugToolsVersion      : '1.0',                //https://bit.ly/2QMKLfe
             fbBom                         : '29.0.0',             //http://bit.ly/2Q81pGJ
             fbPrefPluginVersion           : '1.4.0',              //https://bit.ly/3FdQQYE
@@ -104,5 +105,10 @@ ext {
             hiltCompiler            : "com.google.dagger:hilt-android-compiler:${versions.hilt}",
             hiltNavigationCompose   : "androidx.hilt:hilt-navigation-compose:${versions.hiltNavigationCompose}",
             hiltPlugin              : "com.google.dagger:hilt-android-gradle-plugin:${versions.hilt}"
+    ]
+
+    debug = [
+            timber           : "com.jakewharton.timber:timber:${versions.timberVersion}",
+            processPhoenix   : "com.jakewharton:process-phoenix:${versions.processPhoenixVersion}"
     ]
 }

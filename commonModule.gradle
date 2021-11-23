@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 apply from: '../config.gradle'
 apply from: '../commonAndroidDefaultConfig.gradle'
@@ -42,4 +44,9 @@ android {
 
 dependencies {
     implementation lang.kotlinStdLib
+    implementation di.hiltAndroid
+    implementation di.hiltNavigationCompose
+    kapt di.hiltCompiler
+
+    implementation debug.timber
 }

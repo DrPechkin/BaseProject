@@ -10,27 +10,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import ru.vedernikov.f_debug.R
 import ru.vedernikov.f_debug.ui.theme.DebugMenuTheme
 import ru.vedernikov.i_network.type.ServerType
-import ru.vedernikov.i_network.type.ServerTypeContainer
 
 @Composable
 fun ServerSettingsDebugScreen(
-    viewModel: ServerSettingsDebugViewModel = viewModel()
+    viewModel: ServerSettingsDebugViewModel = hiltViewModel()
 ) {
+    val state = viewModel.state.collectAsState()
 
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
 
         ServerTypeRadioGroup(
-            Modifier.padding(horizontal = 16.dp)
+            Modifier.padding(horizontal = 16.dp),
+            selectedServerType = state.value.serverType
         ) {
             viewModel.setServerType(ServerType.valueOf(it))
         }
-
     }
 }
 
@@ -45,12 +45,13 @@ fun ServerSettingsDebugScreenPreview() {
 @Composable
 fun ServerTypeRadioGroup(
     modifier: Modifier,
+    selectedServerType: ServerType,
     onSelectedChange: (String) -> Unit
 ) {
 
     val radioGroupOptions: List<String> = ServerType.values().map { it.name }
 
-    var selected by remember { mutableStateOf(ServerTypeContainer.serverType.name) }
+    var selected by remember { mutableStateOf(selectedServerType.name) }
 
     Column(
         modifier = modifier.padding(top = 8.dp)

@@ -8,6 +8,7 @@
     <string name="debug_show_app_settings_debug_item">Настройки приложения</string>
     <string name="debug_fcm_empty_text">FCM-токен еще не создан или не реализована логика сохранения токена в хранилище</string>
     <string name="debug_reload_btn_text">Обновить</string>
+    <string name="debug_reboot_canceled_toast">Для того чтобы изменения вступили в силу требуется перезапустить приложение</string>
 
     <!-- Debug notification settings -->
     <string name="debug_notification_channel_id">CHANNEL_ID</string>

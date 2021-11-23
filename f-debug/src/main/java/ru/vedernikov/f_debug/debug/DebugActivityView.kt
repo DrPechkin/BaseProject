@@ -3,19 +3,24 @@ package ru.vedernikov.f_debug.debug
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.vedernikov.base.ActivityRoute
 import ru.vedernikov.base.BaseActivityView
+import ru.vedernikov.f_debug.DebugInteractor
 import ru.vedernikov.f_debug.Screens
 import ru.vedernikov.f_debug.fcm.FcmScreen
 import ru.vedernikov.f_debug.server_settings.ServerSettingsDebugScreen
 import ru.vedernikov.f_debug.ui.theme.DebugMenuTheme
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class DebugActivityView : BaseActivityView() {
 
     companion object : ActivityRoute {

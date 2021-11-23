@@ -1,10 +1,10 @@
 apply from: '../commonModule.gradle'
 
-apply plugin: 'kotlin-kapt'
-
 dependencies {
     implementation project(":base")
     implementation project(":i-network")
+
+    implementation debug.processPhoenix
 
     implementation compose.composeUi
     implementation compose.composeMaterial

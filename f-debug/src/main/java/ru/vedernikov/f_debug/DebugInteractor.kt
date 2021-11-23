@@ -7,11 +7,12 @@ import okhttp3.OkHttpClient
 import ru.vedernikov.base.ActivityRoute
 import ru.vedernikov.f_debug.network.DelayInterceptor
 import ru.vedernikov.f_debug.notification.DebugNotificationBuilder
-import ru.vedernikov.f_debug.server_settings.reboot.DebugRebootInteractor
+import ru.vedernikov.f_debug.server_settings.reboot.interactor.DebugRebootInteractor
 import ru.vedernikov.f_debug.storage.DebugServerSettingsStorage
 import ru.vedernikov.i_network.type.ServerType
+import javax.inject.Inject
 
-class DebugInteractor(
+class DebugInteractor @Inject constructor(
     private val application: Application,
     private val debugServerSettingsStorage: DebugServerSettingsStorage,
     private val rebootInteractor: DebugRebootInteractor
@@ -52,7 +53,7 @@ class DebugInteractor(
     }
 
     fun reboot(route: ActivityRoute) {
-        rebootInteractor.reboot(route)
+        rebootInteractor.reboot(application.applicationContext, route)
     }
 
     private fun handleFirstActivityOpening(icon: Int) {
