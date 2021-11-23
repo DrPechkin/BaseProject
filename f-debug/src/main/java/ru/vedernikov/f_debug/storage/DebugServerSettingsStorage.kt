@@ -2,14 +2,16 @@ package ru.vedernikov.f_debug.storage
 
 import android.content.SharedPreferences
 import androidx.core.content.edit
+import ru.vedernikov.f_debug.di.NO_BACKUP_SHARED_PREF
 import ru.vedernikov.i_network.type.ServerType
 import javax.inject.Inject
+import javax.inject.Named
 
 private const val DEBUG_SERVER_TYPE = "DEBUG_SERVER_TYPE"
 private const val REQUEST_DELAY = "REQUEST_DELAY"
 
 class DebugServerSettingsStorage @Inject constructor(
-    private val noBackupSharedPref: SharedPreferences
+    @Named(NO_BACKUP_SHARED_PREF) private val noBackupSharedPref: SharedPreferences
 ) {
 
     var serverType: ServerType

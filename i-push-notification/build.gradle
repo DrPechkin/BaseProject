@@ -1,0 +1,8 @@
+apply from: '../commonModule.gradle'
+
+dependencies {
+    implementation project(":base")
+
+    implementation platform(firebase.bom)
+    implementation firebase.messaging
+}
