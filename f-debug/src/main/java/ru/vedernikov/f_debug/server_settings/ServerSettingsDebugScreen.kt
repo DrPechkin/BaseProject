@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.RadioButton
+import androidx.compose.material.Slider
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -31,6 +32,22 @@ fun ServerSettingsDebugScreen(
         ) {
             viewModel.setServerType(ServerType.valueOf(it))
         }
+
+        Text(
+            modifier = Modifier
+                .padding(horizontal = 16.dp)
+                .padding(top = 16.dp),
+            text = stringResource(
+                id = R.string.debug_server_settings_request_delay_text,
+                state.value.requestDelaySeconds
+            )
+        )
+        Slider(
+            modifier = Modifier.padding(horizontal = 16.dp),
+            value = state.value.requestDelayCoefficient.toFloat(),
+            valueRange = 0f..5f,
+            onValueChange = { viewModel.requestDelayCoefficientChanges(it.toInt()) }
+        )
     }
 }
 
