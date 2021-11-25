@@ -10,10 +10,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import ru.vedernikov.f_debug.R
 import ru.vedernikov.f_debug.Screens
+import ru.vedernikov.f_debug.system_settings.AppSettingsDebugActivityRoute
+import ru.vedernikov.f_debug.system_settings.DeveloperToolsDebugActivityRoute
 import ru.vedernikov.f_debug.ui.theme.DebugMenuTheme
 
 @Composable
 fun DebugScreen(navController: NavController) {
+    val context = LocalContext.current
+
     LazyColumn(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -39,12 +43,12 @@ fun DebugScreen(navController: NavController) {
         }
         item {
             DebugMenuItem(stringResource(id = R.string.debug_show_developer_tools_debug_item)) {
-
+                context.startActivity(DeveloperToolsDebugActivityRoute().prepareIntent(context))
             }
         }
         item {
             DebugMenuItem(stringResource(id = R.string.debug_show_app_settings_debug_item)) {
-
+                context.startActivity(AppSettingsDebugActivityRoute().prepareIntent(context))
             }
         }
     }
