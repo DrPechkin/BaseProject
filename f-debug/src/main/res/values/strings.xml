@@ -23,4 +23,10 @@
     <string name="debug_server_settings_choose_server_type_tv">Выберите тип сервера:</string>
     <!--endregion-->
 
+
+    <string name="debug_app_info_version_code_text">Version Code : %1$d</string>
+    <string name="debug_app_info_version_name_text">Version name : %1$s</string>
+    <string name="debug_app_info_package_name_text">Package name : %1$s</string>
+    <string name="debug_app_info_build_type_text">Build type : %1$s</string>
+
 </resources>

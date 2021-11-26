@@ -16,6 +16,7 @@ import ru.vedernikov.base.BaseActivityView
 import ru.vedernikov.f_debug.DebugInteractor
 import ru.vedernikov.f_debug.Screens
 import ru.vedernikov.f_debug.fcm.FcmScreen
+import ru.vedernikov.f_debug.info.DebugAppInfoScreen
 import ru.vedernikov.f_debug.server_settings.ServerSettingsDebugScreen
 import ru.vedernikov.f_debug.ui.theme.DebugMenuTheme
 import javax.inject.Inject
@@ -50,6 +51,9 @@ class DebugActivityView : BaseActivityView() {
                          composable(route = Screens.ServerSettings.route) {
                              ServerSettingsDebugScreen()
                          }
+                        composable(route = Screens.AppInfo.route) {
+                            DebugAppInfoScreen()
+                        }
                     }
                 }
             }

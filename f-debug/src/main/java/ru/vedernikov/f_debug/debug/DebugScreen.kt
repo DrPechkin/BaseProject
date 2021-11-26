@@ -23,7 +23,7 @@ fun DebugScreen(navController: NavController) {
     ) {
         item {
             DebugMenuItem(stringResource(id = R.string.debug_show_app_info_debug_item)) {
-
+                navController.navigate(Screens.AppInfo.route)
             }
         }
         item {
