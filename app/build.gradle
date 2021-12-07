@@ -26,7 +26,8 @@ android {
 }
 
 dependencies {
-    implementation project(":f-debug")
+    debugImplementation project(":f-debug")
+    releaseImplementation project(":f-debug-no-op")
     implementation project(":base")
     implementation project(":i-network")
     implementation project(":i-push-notification")

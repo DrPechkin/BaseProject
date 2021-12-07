@@ -9,6 +9,7 @@ dependencyResolutionManagement {
 rootProject.name = "BaseComposeProject"
 include ':app'
 include ':f-debug'
+include ':f-debug-no-op'
 include ':base'
 include ':i-network'
 include ':i-push-notification'

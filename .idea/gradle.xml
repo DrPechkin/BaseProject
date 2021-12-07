@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/f-debug" />
+            <option value="$PROJECT_DIR$/f-debug-no-op" />
             <option value="$PROJECT_DIR$/i-network" />
             <option value="$PROJECT_DIR$/i-push-notification" />
           </set>
