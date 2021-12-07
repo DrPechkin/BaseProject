@@ -6,10 +6,4 @@ dependencies {
     implementation project(":i-push-notification")
 
     implementation debug.processPhoenix
-
-    implementation compose.composeUi
-    implementation compose.composeMaterial
-    implementation compose.uiToolingPreview
-    debugImplementation compose.uiTooling
-    debugImplementation compose.navigationCompose
 }

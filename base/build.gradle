@@ -2,5 +2,11 @@ apply from: '../commonModule.gradle'
 
 dependencies {
     api androidX.appcompat
+    api androidX.lifecycleScope
+    api androidX.material
     api compose.activityCompose
+    api compose.composeUi
+    api compose.composeMaterial
+    debugApi compose.uiToolingPreview
+    debugApi compose.activityCompose
 }

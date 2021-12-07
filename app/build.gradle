@@ -27,6 +27,7 @@ android {
 
 dependencies {
     implementation project(":f-debug")
+    implementation project(":base")
     implementation project(":i-network")
     implementation project(":i-push-notification")
 
@@ -35,14 +36,9 @@ dependencies {
 
     implementation debug.timber
 
-    implementation androidX.coreKtx
-    implementation androidX.appcompat
-    implementation androidX.lifecycleScope
-    implementation androidX.material
-    implementation compose.composeUi
-    implementation compose.composeMaterial
-    implementation compose.uiToolingPreview
-    implementation compose.activityCompose
+    implementation platform(firebase.bom)
+    implementation firebase.crashlytics
+    implementation firebase.perfomanceMonitor
 }
 
 //apply plugin: 'com.google.gms.google-services'
