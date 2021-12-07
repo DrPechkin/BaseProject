@@ -24,10 +24,10 @@ android {
             matchingFallbacks = ['release']
             resValue "string", "app_name", "App QA"
 
-//            Добавить название группи для дистрибьюции
-//            firebaseAppDistribution {
-//                groups=""
-//            }
+//            TODO Добавить название группы для дистрибьюции
+            firebaseAppDistribution {
+                groups="qa-team"
+            }
         }
         release {
             signingConfig signingConfigs.release
@@ -36,9 +36,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-rules.pro'
             matchingFallbacks = ['release', 'qa']
 
-//            firebaseAppDistribution {
-//                groups=""
-//            }
+            firebaseAppDistribution {
+                groups="qa-team"
+            }
         }
     }
 }
