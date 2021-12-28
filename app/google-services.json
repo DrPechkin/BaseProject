@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "219756559396",
+    "project_id": "my-base-project-11443",
+    "storage_bucket": "my-base-project-11443.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219756559396:android:1fe78eace66be6fd5f6cb1",
+        "android_client_info": {
+          "package_name": "ru.vedernikov.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219756559396-3grv4su704r3eo63rojr733f61rl1jut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcU0CV5VeSnw4badar6y3pxgczjxZUr84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219756559396-3grv4su704r3eo63rojr733f61rl1jut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219756559396:android:98ee1c295ac8e8585f6cb1",
+        "android_client_info": {
+          "package_name": "ru.vedernikov.app.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219756559396-3grv4su704r3eo63rojr733f61rl1jut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcU0CV5VeSnw4badar6y3pxgczjxZUr84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219756559396-3grv4su704r3eo63rojr733f61rl1jut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

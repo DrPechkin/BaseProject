@@ -42,4 +42,4 @@ dependencies {
     implementation firebase.perfomanceMonitor
 }
 
-//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
