@@ -2,6 +2,7 @@ package ru.vedernikov.i_push_notification
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -11,6 +12,7 @@ import javax.inject.Inject
  * Срабатывает только если приложение не в фоне.
  * Иначе при клике на пуш происходит открытие LAUNCHER активити
  */
+@AndroidEntryPoint
 class MessagingService : FirebaseMessagingService() {
 
     @Inject
